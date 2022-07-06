@@ -1,0 +1,132 @@
+.modal-dates {
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+
+  .css-l0iinn {
+    position: absolute;
+    left: 52%;
+    transform: translateX(-50%);
+    color: rgb(23, 43, 77);
+    font-weight: bold;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans',
+      'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    pointer-events: none;
+
+    svg {
+      display: none;
+    }
+  }
+
+  .css-bkrceb-MuiButtonBase-root-MuiPickersDay-root {
+    background-color: transparent;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    color: rgb(9, 30, 66);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 4px 9px;
+    position: relative;
+    text-align: center;
+  }
+
+  .css-bkrceb-MuiButtonBase-root-MuiPickersDay-root.Mui-selected {
+    background-color: rgb(66, 82, 110);
+    border: 2px solid transparent;
+    border-radius: 3px;
+    color: rgb(255, 255, 255);
+
+    &:focus {
+      background-color: rgb(66, 82, 110);
+      border: 2px solid transparent;
+      border-radius: 3px;
+      color: rgb(255, 255, 255);
+    }
+  }
+
+  .css-u0soqy-MuiPickerStaticWrapper-root {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    padding-right: 12px;
+    height: 340px;
+  }
+
+  .css-9reuh9-MuiPickersArrowSwitcher-root {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .date-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+
+    .display-date {
+      text-align: center;
+      color: #172b4d;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+    }
+
+    .pick-time {
+      background-color: #ffffff;
+      box-shadow: inset 0 0 0 2px #0079bf;
+      width: 45px;
+      margin: 0;
+      outline: none;
+      border: none;
+      box-sizing: border-box;
+      color: #172b4d;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      transition-property: background-color, border-color, box-shadow;
+      transition-duration: 85ms;
+      transition-timing-function: ease;
+      border-radius: 3px;
+      text-align: center;
+    }
+  }
+
+  .save {
+    @include task-save();
+    cursor: pointer;
+    text-align: center;
+    background-color: #0079bf;
+    box-shadow: none;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    border-radius: 3px;
+
+    &:hover {
+      background-color: #026aa7;
+      box-shadow: none;
+      border: none;
+      color: #ffffff;
+    }
+
+    &.gray {
+      margin-top: 8px;
+      background-color: rgba(9, 30, 66, 0.04);
+      color: #172b4d;
+
+      &:hover {
+        background-color: rgba(9, 30, 66, 0.08);
+        box-shadow: none;
+        border: none;
+      }
+    }
+  }
+}

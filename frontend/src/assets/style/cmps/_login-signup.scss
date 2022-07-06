@@ -1,0 +1,155 @@
+.login-signup {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  background: none;
+  padding: 25px 40px;
+  margin: auto;
+
+  @include for-narrow-layout {
+    max-width: 400px;
+    height: auto;
+    background-color: #ffff;
+    box-shadow: rgb(0 0 0 / 10%) 0 0 10px;
+  }
+
+  .error-message {
+    margin: auto;
+    background-color: $clr13;
+    color: white;
+    text-align: center;
+    border-radius: 3px;
+    padding: rem(7px) rem(14px);
+    font-size: rem(14px);
+    font-weight: 300;
+    max-width: rem(320px);
+    width: 100%;
+  }
+
+  h1 {
+    text-align: center;
+    width: 100%;
+    height: rem(28px);
+    line-height: rem(28px);
+    font-weight: bold;
+    color: $clr3;
+    margin-block-start: rem(10px);
+    margin-block-end: rem(25px);
+  }
+
+  input {
+    display: block;
+    margin: 0 auto rem(16.8px);
+    max-width: rem(320px);
+    width: 100%;
+    height: rem(44px);
+    padding: rem(7px);
+    border-radius: 3px;
+    background-color: $clr4;
+    border: 2px solid $clr5;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+      'Helvetica Neue', sans-serif;
+    font-weight: 300;
+
+    &:focus {
+      border-color: $brand-clr13;
+    }
+  }
+
+  button {
+    display: block;
+    margin: 0 auto rem(16.8px);
+    max-width: rem(320px);
+    color: #ffff;
+    border: none;
+    border-radius: 0.3em;
+    width: 100%;
+    height: rem(36px);
+    padding: rem(8.4px) rem(18.2px);
+    font-weight: bold;
+    transition: background-color 0.08s;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+      'Helvetica Neue', sans-serif;
+
+    &.login-btn {
+      background-color: $clr6;
+
+      &:hover {
+        background-color: lighten($clr6, 8%);
+      }
+    }
+
+    &.signup-btn {
+      background-color: $clr7;
+      height: rem(40px);
+
+      &:hover {
+        background-color: lighten($clr7, 8%);
+      }
+    }
+  }
+
+  .login-method {
+    width: 100%;
+
+    div {
+      width: 100%;
+      text-align: center;
+      height: rem(29px);
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      line-height: rem(29px);
+      font-size: rem(12px);
+      font-weight: 300;
+      color: $font-clr2;
+    }
+
+    button {
+      height: rem(40px);
+      margin-block-end: rem(12px);
+      background-color: #ffff;
+      box-shadow: rgb(0 0 0 / 20%) 1px 1px 5px 0;
+      color: $font-clr3;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+        'Helvetica Neue', sans-serif;
+      border-radius: 3px;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: darken(#ffff, 2%);
+      }
+    }
+  }
+
+  hr {
+    margin-block-start: rem(25px);
+    margin-block-end: rem(14px);
+    height: 2px;
+    border: none;
+    border-top: 1px solid hsl(0, 0%, 80%);
+    padding: 0;
+  }
+
+  footer {
+    width: 100%;
+    height: rem(30px);
+    line-height: rem(30px);
+    margin-top: rem(14px);
+    margin-bottom: rem(14px);
+    text-align: center;
+
+    a {
+      font-size: rem(14px);
+      text-decoration: none;
+      margin-inline-end: 1rem;
+      color: $clr7;
+      font-weight: 300;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

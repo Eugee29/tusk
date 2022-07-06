@@ -1,0 +1,32 @@
+.attachment-add {
+  width: 280px;
+
+  .attach-computer {
+    display: none;
+  }
+
+  .attach-computer-label {
+    @include modal-main-btn;
+  }
+
+  hr {
+    margin: 0.5rem 0;
+    height: 1px;
+    background: $clr12;
+    border: none;
+  }
+
+  .input-label {
+    @include modal-label;
+  }
+
+  .link-input {
+    @include modal-input;
+  }
+
+  .attach-btn {
+    @include nice-btn($brand-clr8, $brand-clr4);
+    padding-left: em(12px, 14px);
+    padding-right: em(12px, 14px);
+  }
+}

@@ -1,0 +1,87 @@
+.board-section-list-item {
+  margin: 0 2% 2% 0;
+  padding: 0;
+  transform: translate(0);
+  width: 100%;
+  cursor: pointer;
+
+  .board-tile {
+    background-color: $brand-clr11;
+    color: $font-clr1;
+    line-height: 20px;
+    padding: 8px;
+    position: relative;
+    text-decoration: none;
+    border-radius: 3px;
+    display: block;
+    background-position: 50% !important;
+    background-size: cover !important;
+  }
+
+  .board-tile-details {
+    display: flex;
+    flex-direction: column;
+    height: 110px;
+    justify-content: space-between;
+    position: relative;
+
+    .board-tile-details-name {
+      word-wrap: break-word;
+      display: inline-block;
+      flex: 0 0 auto;
+      font-size: rem(16px);
+      font-weight: 700;
+      max-height: 40px;
+      overflow: hidden;
+      width: 100%;
+    }
+  }
+}
+
+.board-tile:hover .board-tile-fade {
+  background-color: #00000050;
+}
+
+.board-tile-fade {
+  background-color: #00000040;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  border-radius: 3px;
+  display: block;
+}
+
+.board-tile-details-sub-container {
+  .boardlist-icon {
+    position: absolute;
+    right: 4px;
+    bottom: 1px;
+
+    .star-icon {
+      height: 16px;
+      width: 16px;
+    }
+
+    &.fill {
+      .star-icon {
+        color: gold;
+      }
+
+      &:hover .star-icon {
+        color: #ffff;
+      }
+    }
+
+    &.outline {
+      &:hover .star-icon {
+        color: gold;
+      }
+
+      .star-icon {
+        color: #ffff;
+      }
+    }
+  }
+}

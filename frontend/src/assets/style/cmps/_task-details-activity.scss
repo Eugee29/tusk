@@ -1,0 +1,137 @@
+.task-details-activity {
+  clear: both;
+  margin-bottom: 24px;
+  position: relative;
+
+  .activity-text {
+    .img-container {
+      width: 100%;
+      margin: 8px 0 4px;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 3px;
+      }
+    }
+  }
+
+  .activity-title-container {
+    @include task-category();
+  }
+
+  .activity-list-container {
+    margin-left: 40px;
+    min-height: 32px;
+    padding: 8px 0;
+    position: relative;
+
+    .member {
+      img {
+        object-fit: cover;
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+      }
+    }
+
+    .user-container {
+      height: 32px;
+      left: -44px;
+      position: absolute;
+      top: 8px;
+      width: 32px;
+      display: block;
+
+      .member {
+        @include task-member-button(none);
+
+        .label {
+          @include task-member-label();
+          padding: 2px 14px;
+        }
+      }
+    }
+
+    .comment-frame {
+      background-color: #fff;
+      border-radius: 3px;
+      box-shadow: 0 1px 2px -1px #091e4240, 0 0 0 1px #091e4214;
+      margin: -2px 4px 12px 0;
+      overflow: hidden;
+      position: relative;
+      transition: box-shadow 85ms ease;
+
+      .comment-container {
+        padding: 8px 12px;
+        position: relative;
+        transition-duration: 85ms;
+        transition-property: padding-bottom;
+        transition-timing-function: ease;
+
+        a {
+          font-size: 14px;
+          font-weight: 400;
+          border-radius: 3px;
+          display: block;
+          line-height: 20px;
+          outline: none;
+          transition-duration: 85ms;
+          transition-property: background-color, border-color, box-shadow;
+          transition-timing-function: ease;
+          background: #fff !important;
+          box-sizing: initial;
+          min-height: 20px;
+          resize: none;
+          width: 100%;
+          border: 0;
+          box-shadow: none;
+          margin: -8px -12px;
+          padding: 8px 12px;
+          overflow: hidden;
+          overflow-wrap: break-word;
+          height: 20px;
+        }
+
+        textarea {
+          padding-bottom: 34px;
+          overflow: hidden;
+          overflow-wrap: break-word;
+          resize: none;
+          background: #fff;
+          box-shadow: none;
+          width: 100%;
+          border: none;
+          border-radius: 3px;
+          font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans,
+            Helvetica Neue, sans-serif;
+          font-size: 14px;
+          font-weight: 400;
+          outline: none;
+        }
+
+        input {
+          @include task-save();
+        }
+      }
+    }
+
+    .activity-container {
+      word-wrap: break-word;
+      margin: 0;
+      color: #172b4d;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+      padding-bottom: 3px;
+    }
+
+    .time-container {
+      font-size: 12px;
+      margin: 0;
+      min-width: 110px;
+      color: #5e6c84;
+    }
+  }
+}

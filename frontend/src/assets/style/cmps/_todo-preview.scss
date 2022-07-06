@@ -1,0 +1,165 @@
+.todo-preview {
+  border-radius: 3px;
+  padding-left: 40px;
+  position: relative;
+
+  &:hover {
+    background-color: $clr8;
+  }
+
+  .checkbox-container {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 1rem;
+    height: 1rem;
+    margin: 6px;
+    cursor: pointer;
+
+    .checkbox {
+      &.unchecked {
+        color: $clr5;
+        background-color: $clr4;
+
+        &:hover {
+          background-color: darken($clr4, 6%);
+        }
+      }
+
+      &.checked {
+        color: $brand-clr2;
+
+        &:hover {
+          color: lighten($brand-clr2, 12%);
+        }
+      }
+    }
+  }
+
+  .title-container {
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    padding: 6px 0;
+    width: 100%;
+    cursor: pointer;
+
+    .controls {
+      align-self: start;
+    }
+
+    &.edit {
+      .controls {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 32px;
+        margin-top: 8px;
+
+        .menu-container {
+          opacity: initial;
+          padding: 8px 10px;
+          width: 36px;
+
+          .menu {
+            width: 16px;
+            height: 16px;
+          }
+        }
+
+        .btn-container {
+          display: flex;
+          align-items: center;
+          margin: 0;
+          height: 100%;
+
+          button {
+            height: 100%;
+            border: none;
+            border-radius: 3px;
+            padding: 6px 12px;
+          }
+
+          .save {
+            background-color: $brand-clr2;
+            color: $font-clr1;
+            margin: 0;
+            margin-inline-end: 4px;
+            transition: background-color 0.085s;
+
+            &:hover {
+              background-color: $brand-clr1;
+            }
+          }
+
+          .discard-container {
+            height: 100%;
+            margin: 0;
+            padding: 2px;
+            background: none;
+
+            .discard {
+              width: 100%;
+              height: 100%;
+              color: $clr10;
+
+              &:hover {
+                color: $brand-clr4;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .todo-title {
+      @include text-area-edit;
+      flex-grow: 1;
+      font-size: rem(14px);
+      font-weight: 400;
+
+      &.crossed {
+        text-decoration: line-through;
+        color: $clr3;
+      }
+    }
+
+    .menu-container {
+      position: relative;
+      opacity: 0;
+      height: 100%;
+      width: 20px;
+      padding: 2px;
+      border-radius: 3px;
+
+      &:hover {
+        background-color: $clr9;
+      }
+
+      .menu {
+        height: 100%;
+        width: 100%;
+        color: $clr3;
+      }
+    }
+
+    .btn-container {
+      display: none;
+    }
+
+    &.edit {
+      flex-direction: column;
+
+      .btn-container {
+        display: initial;
+      }
+    }
+  }
+
+  &:hover {
+    .menu-container {
+      opacity: initial;
+    }
+  }
+}

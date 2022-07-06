@@ -1,0 +1,113 @@
+.dynamic-modal {
+  float: right;
+  background-color: #ffffff;
+  min-width: 190px;
+  width: 304px;
+
+  position: fixed;
+  left: -1000px;
+  z-index: 5000;
+  border-radius: 3px;
+  box-shadow: 0 8px 16px -4px #091e4240, 0 0 0 1px #091e4214;
+
+  &.wide {
+    width: 384px;
+  }
+
+  &.wide-dashboard {
+    width: 584px;
+  }
+
+  header {
+    margin-bottom: 8px;
+    padding: 0 12px;
+    position: relative;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 12px 1fr 12px;
+
+    .label {
+      color: #172b4d;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Noto Sans', 'Ubuntu', 'Droid Sans',
+        'Helvetica Neue', sans-serif;
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 400;
+      border-bottom: 1px solid rgba(9, 30, 66, 0.13);
+      color: #5e6c84;
+      height: 40px;
+      display: block;
+      line-height: 40px;
+      margin: 0;
+      overflow: hidden;
+      padding: 0 32px;
+      position: relative;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      grid-column: 1 / span 3;
+      grid-row: 1;
+      text-align: center;
+    }
+
+    .sidebar-icon-left {
+      grid-column: 1/4;
+      grid-row: 1;
+      background: transparent;
+      border: none;
+      color: #6b778c;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      z-index: 2;
+      outline: none;
+      height: auto;
+      width: 10px;
+      color: currentcolor;
+      display: inline-block;
+      fill: rgb(255, 255, 255);
+      flex-shrink: 0;
+      line-height: 1;
+      border-radius: 3px;
+      box-sizing: border-box;
+      display: inline-block;
+      line-height: 20px;
+    }
+
+    .sidebar-icon-right {
+      align-self: center;
+      grid-column: 3;
+      grid-row: 1;
+      background: transparent;
+      border: none;
+      color: #6b778c;
+      cursor: pointer;
+      margin: 0;
+      padding: 0;
+      z-index: 2;
+      outline: none;
+      width: 1rem;
+      height: 1rem;
+      color: currentcolor;
+      display: inline-block;
+      fill: rgb(255, 255, 255);
+      flex-shrink: 0;
+      line-height: 1;
+      border-radius: 3px;
+      box-sizing: border-box;
+      display: inline-block;
+      line-height: 20px;
+    }
+
+    svg {
+      height: 100%;
+      width: 100%;
+      color: #6b778c;
+    }
+  }
+
+  .main-modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 0 12px 12px;
+  }
+}

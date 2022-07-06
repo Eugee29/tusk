@@ -1,0 +1,243 @@
+.home-page {
+  position: relative;
+  color: $brand-clr6;
+  background: linear-gradient(0deg, #fff, #eae6ff 100%);
+  overflow-x: hidden;
+  height: 100%;
+
+  .hero {
+    text-align: center;
+    position: relative;
+    align-items: flex-start;
+    height: 450x;
+
+    @include for-narrow-layout {
+      text-align: center;
+      height: 450px;
+    }
+
+    @include for-normal-layout {
+      display: flex;
+      align-items: center;
+      height: 450px;
+    }
+
+    @include for-wide-layout {
+      text-align: initial;
+      height: 450px;
+    }
+
+    .hero-message {
+      // height: rem(348px);
+
+      @include for-normal-layout {
+        width: rem(560px);
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      @include for-wide-layout {
+        // width: rem(665px);
+      }
+
+      h1 {
+        width: 100%;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.25;
+        font-family: source-sans-pro-semibold;
+
+        @include for-narrow-layout {
+          font-size: rem(44px);
+        }
+
+        @include for-normal-layout {
+          font-size: rem(48px);
+        }
+      }
+
+      p {
+        font-size: rem(22px);
+        margin-bottom: 3rem;
+        line-height: 1.5;
+        font-family: source-sans-pro-regular;
+
+        @include for-normal-layout {
+          font-size: rem(23px);
+        }
+      }
+
+      form {
+        font-family: source-sans-pro-regular;
+        margin-block-end: 1rem;
+
+        input {
+          display: none;
+          font-family: inherit;
+          font-size: 1.25rem;
+          color: $clr2;
+          height: rem(45px);
+          padding: rem(12px) rem(6px);
+          margin-inline-end: 8px;
+          border-radius: 6px;
+          border: 1px solid $clr1;
+          background-color: white;
+          transition: 0.2s;
+
+          &:focus {
+            border-color: $brand-clr7;
+            box-shadow: 0 0 0 0.2rem rgb(0 101 255 / 25%);
+            outline: none;
+          }
+
+          &::placeholder {
+            color: lighten($clr2, 40%);
+          }
+
+          @include for-narrow-layout {
+            display: initial;
+            width: rem(397px);
+            margin-inline-end: 16px;
+          }
+
+          @include for-normal-layout {
+            width: rem(303px);
+          }
+
+          @include for-wide-layout {
+            width: rem(364px);
+          }
+        }
+      }
+    }
+
+    .hero-img {
+      display: none;
+      height: 100%;
+      flex-grow: 1;
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-inline-start: 80px;
+      margin-inline-end: -80px;
+
+      @include for-normal-layout {
+        display: initial;
+      }
+
+      @include for-wide-layout {
+        margin-inline-start: 95px;
+        margin-inline-end: -95px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .app-info {
+    margin-top: 4rem;
+    text-align: center;
+
+    .introduction-header {
+      font-family: source-sans-pro-semibold;
+      font-size: 2.25rem;
+      line-height: 1.333;
+      margin-bottom: 0.5rem;
+    }
+
+    .introduction {
+      font-family: source-sans-pro-regular;
+      font-size: rem(24px);
+      margin-bottom: 5rem;
+      line-height: 1.3;
+    }
+
+    .demo-img-container {
+      margin: auto;
+      max-width: 900px;
+      width: 100%;
+      margin-bottom: 4rem;
+      box-shadow: 0px 0px 16px 0px rgba(130, 130, 130, 1);
+
+      img {
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .home-page-footer {
+    position: absolute;
+    padding: 1rem;
+    bottom: 0;
+    left: 0;
+    background-color: $brand-clr12;
+    width: 100%;
+    color: $font-clr1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-family: source-sans-pro-regular;
+    font-size: 1.15rem;
+    text-align: center;
+
+    @include for-narrow-layout {
+      gap: 4rem;
+    }
+
+    .credit {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5em;
+
+      .icons-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        .icon-container {
+          height: 2rem;
+          width: 2rem;
+          color: $clr1;
+          cursor: pointer;
+
+          &:hover {
+            color: $clr4;
+          }
+
+          * {
+            height: 100%;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  .start-demo {
+    @include btn2($brand-clr5, white);
+    font-family: inherit;
+    width: 100%;
+    height: rem(44px);
+    font-size: rem(20px);
+
+    @include for-narrow-layout {
+      width: rem(277px);
+    }
+
+    @include for-normal-layout {
+      width: rem(210px);
+    }
+
+    @include for-wide-layout {
+      width: rem(254px);
+    }
+  }
+}

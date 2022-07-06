@@ -1,0 +1,25 @@
+.main-layout {
+  overflow: hidden;
+}
+
+.home-page-layout {
+  margin: auto;
+  max-width: 540px;
+  height: 100%;
+  padding: rem(112px) rem(15px);
+  min-height: 100vh;
+
+  @include for-narrow-layout {
+    max-width: 720px;
+  }
+
+  @include for-normal-layout {
+    max-width: 960px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  @include for-wide-layout {
+    max-width: 1140px;
+  }
+}

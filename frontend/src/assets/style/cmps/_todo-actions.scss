@@ -1,0 +1,13 @@
+.todo-actions {
+  padding: 0;
+  width: 280px;
+
+  .delete-btn {
+    @include modal-main-btn;
+    margin-bottom: 0.5rem;
+
+    &:hover {
+      background-color: rgba(9, 30, 66, 0.08);
+    }
+  }
+}

@@ -1,0 +1,334 @@
+.size-section {
+  .label {
+    @include task-sub-header();
+  }
+
+  .box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 4px;
+    margin: 0 -4px;
+    overflow-x: hidden;
+
+    .box-half {
+      height: 62px;
+      cursor: pointer;
+      background: #ffffff;
+      border-radius: 3px;
+      position: relative;
+      border: unset;
+
+      &:focus {
+        box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0079bf;
+        filter: none;
+      }
+
+      .background {
+        background-size: cover;
+        height: 28px;
+        border-radius: 3px 3px 0 0;
+      }
+
+      .lines {
+        padding: 6px 4px 4px 6px;
+        position: relative;
+
+        .lines_1 {
+          background: #6b778c;
+          height: 4px;
+          border-radius: 2px;
+          width: 122px;
+        }
+
+        .lines_2 {
+          background: #6b778c;
+          height: 4px;
+          border-radius: 2px;
+          width: 98px;
+          margin-top: 4px;
+        }
+
+        .lines_3 {
+          display: flex;
+          margin-top: 6px;
+
+          .lines_3_1,
+          .lines_3_2 {
+            width: 16px;
+            height: 6px;
+            background: #6b778c;
+            border-radius: 2px;
+            margin-right: 2px;
+          }
+        }
+
+        .lines_4 {
+          position: absolute;
+          width: 10px;
+          height: 10px;
+          right: 4px;
+          bottom: 4px;
+          background: #6b778c;
+          border-radius: 5px;
+        }
+      }
+    }
+
+    .box-full {
+      height: 62px;
+      cursor: pointer;
+      background: #ffffff;
+      border-radius: 3px;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      border: unset;
+
+      &:focus {
+        box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0079bf;
+        filter: none;
+      }
+
+      .lines {
+        position: absolute;
+        bottom: 4px;
+        padding: 6px 4px 4px 6px;
+
+        .lines_1 {
+          background: #6b778c;
+          width: 116px;
+          height: 4px;
+          border-radius: 2px;
+        }
+
+        .lines_2 {
+          background: #6b778c;
+          width: 92px;
+          margin-top: 4px;
+          height: 4px;
+          border-radius: 2px;
+        }
+      }
+    }
+
+    :hover {
+      filter: saturate(85%) brightness(85%);
+    }
+  }
+
+  .cover-btn {
+    @include button-link();
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+}
+
+.textcolor-section {
+  .label {
+    @include task-sub-header();
+  }
+
+  .box-container {
+    display: grid;
+    gap: 10px;
+    padding: 4px;
+    margin: 0 -4px;
+    overflow-x: hidden;
+    grid-template-columns: 1fr 1fr;
+
+    .box-full {
+      height: 20px;
+      cursor: pointer;
+      background: #ffffff;
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      padding: 6px 10px 6px 12px;
+      box-sizing: unset;
+      overflow: hidden;
+      white-space: nowrap;
+      border: unset;
+
+      &:focus {
+        box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0079bf;
+        filter: none;
+      }
+
+      h3 {
+        color: #ffffff;
+        margin-bottom: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 600;
+        margin: 0 0 8px;
+
+        &.dark {
+          color: #172b4d;
+        }
+      }
+    }
+
+    :hover {
+      filter: saturate(85%) brightness(85%);
+    }
+  }
+}
+
+.colors-section {
+  .label {
+    @include task-sub-header();
+    margin-top: 16px;
+    margin-bottom: 4px;
+  }
+
+  .box-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    padding: 4px;
+    margin: 0 -4px;
+    overflow-x: hidden;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+    button {
+      margin: 0;
+      border-radius: 3px;
+      height: 72px;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: none;
+      width: 50px;
+      height: 32px;
+      cursor: pointer;
+      background-color: #7bc86c;
+      border: none;
+
+      &:hover {
+        filter: saturate(85%) brightness(85%);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0079bf;
+        filter: none;
+      }
+    }
+  }
+}
+
+.attachments-section {
+  .label {
+    @include task-sub-header();
+    margin-top: 16px;
+    margin-bottom: 4px;
+  }
+
+  .box-container {
+    display: grid;
+    gap: 8px;
+    padding: 4px;
+    margin: 0 -4px;
+    overflow-x: hidden;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-size: contain;
+
+    .box-full {
+      background-size: contain;
+      background-color: transparent;
+      margin: 0;
+      border-radius: 3px;
+      height: 72px;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: none;
+      height: 48px;
+      width: 88px;
+      cursor: pointer;
+      border: unset;
+
+      &:focus {
+        box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0079bf;
+        filter: none;
+      }
+    }
+
+    :hover {
+      box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #5ba4cf;
+      filter: none;
+    }
+  }
+
+  .cover-btn {
+    @include button-link();
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  input[type='file'] {
+    display: none;
+  }
+
+  .custom-file-upload {
+    border: unset;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    display: block;
+  }
+}
+
+.unsplash-section {
+  .label {
+    @include task-sub-header();
+    margin-top: 16px;
+    margin-bottom: 4px;
+  }
+
+  .box-container {
+    display: grid;
+    gap: 8px;
+    padding: 4px;
+    margin: 0 -4px;
+    overflow-x: hidden;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-size: contain;
+
+    .box-full {
+      background-size: contain;
+      background-color: transparent;
+      margin: 0;
+      border-radius: 3px;
+      height: 72px;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      box-shadow: none;
+      height: 48px;
+      width: 88px;
+      filter: none;
+      border: unset;
+    }
+
+    :hover {
+      filter: saturate(85%) brightness(85%);
+    }
+
+    :focus {
+      box-shadow: 0 0 0 2px #ffffff, 0 0 0 4px #0079bf;
+      filter: none;
+    }
+  }
+
+  .cover-btn {
+    @include button-link();
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+}

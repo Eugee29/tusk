@@ -1,0 +1,70 @@
+.dashboard-chart {
+  .chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+
+    @include for-mobile-layout {
+      flex-direction: row;
+    }
+
+    .title {
+      text-transform: capitalize;
+      font-weight: 600;
+      color: $brand-clr4;
+      font-size: 0.8rem;
+
+      @include for-mobile-layout {
+        font-size: 1.25rem;
+      }
+    }
+
+    .chart-options {
+      border-radius: 3px;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.212);
+
+      button {
+        color: $brand-clr4;
+        background: none;
+        border: none;
+        padding: 0.8em;
+        background-color: white;
+        font-size: 0.8rem;
+
+        @include for-mobile-layout {
+          font-size: 1rem;
+        }
+
+        &:hover {
+          background-color: darken(white, 4%);
+        }
+
+        &:disabled {
+          cursor: auto;
+          background-color: rgb(66, 82, 110);
+          color: white;
+        }
+      }
+
+      .label {
+        border-right: 1px solid #091e4221;
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+      }
+
+      .member {
+        border-left: 1px solid #091e4221;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+      }
+    }
+  }
+
+  .graph-container {
+    width: 100%;
+    height: 100%;
+  }
+}

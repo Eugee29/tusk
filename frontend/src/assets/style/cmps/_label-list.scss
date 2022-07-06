@@ -1,0 +1,90 @@
+@keyframes open-up {
+  0% {
+  }
+
+  20% {
+    width: 69px;
+  }
+
+  70% {
+    width: 69px;
+    height: 16px;
+  }
+
+  100% {
+    width: 69px;
+    height: 16px;
+    color: #ffff;
+  }
+}
+
+@keyframes close {
+  0% {
+    width: 69px;
+    height: 16px;
+    color: #ffff;
+  }
+
+  30% {
+    height: 8px;
+    color: transparent;
+  }
+
+  80% {
+    height: 8px;
+    width: 40px;
+    color: transparent;
+  }
+
+  100% {
+    height: 8px;
+    width: 40px;
+    color: transparent;
+  }
+}
+
+.label-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  .label {
+    height: 8px;
+    width: 40px;
+    font-size: 12px;
+    font-weight: 700;
+    height: 8px;
+    margin: 0 4px 4px 0;
+    border-radius: 4px;
+    cursor: pointer;
+    color: transparent;
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .label .opened {
+    width: 69px;
+    height: 16px;
+  }
+
+  .label.open {
+    animation-name: open-up;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-direction: forwards;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+  }
+
+  .label.close {
+    animation-name: close;
+    animation-duration: 0.6s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-out;
+    animation-delay: 0s;
+    animation-direction: forwards;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+  }
+}

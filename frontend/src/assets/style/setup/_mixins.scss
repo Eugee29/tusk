@@ -1,0 +1,491 @@
+@mixin for-mobile-layout {
+  @media (min-width: $break-mobile) {
+    @content;
+  }
+}
+
+@mixin for-narrow-layout {
+  @media (min-width: $break-narrow) {
+    @content;
+  }
+}
+
+@mixin for-normal-layout {
+  @media (min-width: $break-normal) {
+    @content;
+  }
+}
+
+@mixin for-wide-layout {
+  @media (min-width: $break-wide) {
+    @content;
+  }
+}
+
+@mixin btn {
+  border-radius: 3px;
+  color: #fff;
+  font-size: 14px;
+  max-width: 400px;
+  overflow: hidden;
+  padding: 6px 12px;
+  position: relative;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+  }
+}
+
+@mixin btn2($bgclr, $clr) {
+  padding: rem(6px) rem(6px);
+  border-radius: 6px;
+  border: none;
+  background-color: $bgclr;
+  color: $clr;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: darken($bgclr, 10%);
+  }
+}
+
+@mixin button-link() {
+  background-color: #091e420a;
+  color: #172b4d;
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: flex;
+  height: 32px;
+  margin-top: 8px;
+  max-width: 300px;
+  overflow: hidden;
+  padding: 6px 12px;
+  position: relative;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  transition-duration: 85ms;
+  transition-property: background-color, border-color, box-shadow;
+  transition-timing-function: ease;
+  user-select: none;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+
+  &:hover {
+    background-color: #091e4214;
+    border: none;
+    box-shadow: none;
+    color: #091e42;
+  }
+}
+
+@mixin button-cover() {
+  background-color: #ffffff3d;
+  color: #172b4d;
+  border-radius: 3px;
+  padding: 6px 12px 6px 6px;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  cursor: pointer;
+  border: unset;
+
+  &:hover {
+    background-color: #00000029;
+    color: #091e42;
+    outline: 0;
+  }
+}
+
+@mixin task-sub-header() {
+  color: #5e6c84;
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  line-height: 20px;
+  margin: 0 8px 4px 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin task-member-button($bgclr) {
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  cursor: pointer;
+  display: block;
+  float: left;
+  margin: 0 1px 8px 0;
+  transition-duration: 85ms;
+  transition-property: background-color, border-color, box-shadow;
+  transition-timing-function: ease;
+  border-radius: 50%;
+  text-transform: uppercase;
+  background-color: $bgclr;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+
+  span {
+    line-height: 30px;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@mixin task-member-label() {
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition-duration: 85ms;
+  transition-property: background-color, border-color, box-shadow;
+  transition-timing-function: ease;
+  text-transform: uppercase;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  font-weight: 600;
+  height: 32px;
+  line-height: 32px;
+  margin: 0 4px 4px 0;
+  min-width: 40px;
+  padding: 0 12px;
+  width: auto;
+
+  span {
+    line-height: 30px;
+    padding: 6px;
+    color: #fff;
+    font-size: 14px;
+    text-transform: none;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+@mixin task-add-button() {
+  background-color: #091e420a;
+  border: none;
+  border-radius: 3px;
+  box-shadow: none;
+  cursor: pointer;
+  display: block;
+  float: left;
+  margin: 0 8px 8px 0;
+  transition-duration: 85ms;
+  transition-property: background-color, border-color, box-shadow;
+  transition-timing-function: ease;
+  text-transform: uppercase;
+  width: 32px;
+  height: 32px;
+
+  span {
+    font-size: 23px;
+    line-height: 28px;
+    padding: 9px;
+    color: #42526e;
+  }
+
+  &:hover {
+    background-color: #091e4214;
+    border: none;
+    box-shadow: none;
+  }
+}
+
+@mixin task-textarea() {
+  overflow: hidden;
+  overflow-wrap: break-word;
+  resize: none;
+  height: 108px;
+  background: #fff;
+  box-shadow: none;
+  width: 100%;
+  border: none;
+  border-radius: 3px;
+  color: #172b4d;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue,
+    sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  outline: none;
+  padding: 8px 12px;
+  margin-left: 40px;
+  width: 490px;
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px #0079bf;
+    background-color: $font-clr1;
+  }
+}
+
+@mixin task-save() {
+  line-height: 20px;
+  padding: 6px 12px;
+  transition-duration: 85ms;
+  transition-property: background-color, border-color, box-shadow;
+  transition-timing-function: ease;
+  white-space: normal;
+  margin-bottom: 0;
+  margin-top: 0;
+  background-color: rgba(9, 30, 66, 0.0392156863);
+  border: none;
+  box-shadow: none;
+  color: #a5adba;
+  cursor: not-allowed;
+  text-align: center;
+
+  &.enableButton {
+    background-color: #0079bf;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
+
+@mixin button-underline() {
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #5e6c84;
+
+  &:hover {
+    color: #172b4d;
+  }
+}
+
+@mixin task-category() {
+  align-items: center;
+  display: flex;
+  min-height: 32px;
+  margin: 0 0 4px 40px;
+  padding: 8px 0;
+  position: relative;
+
+  span {
+    left: -40px;
+    position: absolute;
+    color: #42526e;
+    height: 32px;
+    line-height: 32px;
+    width: 32px;
+    font-size: 24px;
+
+    svg {
+      height: 18px;
+      width: 18px;
+    }
+  }
+
+  h3 {
+    display: inline-block;
+    margin: 0;
+    min-height: 18px;
+    min-width: 40px;
+    width: auto;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #172b4d;
+  }
+}
+
+@mixin btn3 {
+  height: 100%;
+  border: none;
+  border-radius: 3px;
+  background-color: $clr8;
+  padding: 6px 12px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  font-size: rem(14px);
+  color: $brand-clr4;
+  font-weight: 400;
+  line-height: 20px;
+  transition: background-color 0.1s;
+
+  &:hover {
+    background-color: $clr9;
+  }
+}
+
+@mixin nice-btn($bgclr: $brand-clr2, $fontclr: $font-clr1) {
+  display: inline-flex;
+  justify-content: center;
+  padding: rem(6px) rem(24px);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  font-size: rem(14px);
+  font-weight: 400;
+  line-height: 20px;
+  color: $fontclr;
+  background-color: $bgclr;
+  border: none;
+  border-radius: 3px;
+  transition: 0.085s;
+
+  &:hover {
+    background-color: darken($bgclr, 4%);
+  }
+}
+
+@mixin nice-btn2 {
+}
+
+@mixin custom-scrollbar {
+  &::-webkit-scrollbar {
+    border-radius: 6rem;
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 6rem;
+    background-color: #dadbe2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 6rem;
+    background: #c0c4ce;
+  }
+}
+
+@mixin custom-scrollbar2 {
+  &::-webkit-scrollbar {
+    border-radius: 3px;
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    margin: 1rem;
+    border-radius: 3px;
+    background-color: #dadbe22d;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: #dde0e7ab;
+  }
+}
+
+@mixin modal-main-btn {
+  text-align: left;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  width: 200%;
+  height: 2rem;
+  line-height: 20px;
+  display: block;
+  font-size: rem(14px);
+  font-weight: 400;
+  margin: 0 em(-12px, 14px);
+  padding: em(6px, 14px) em(12px, 14px);
+  background-color: white;
+  border: none;
+  color: $brand-clr4;
+  cursor: pointer;
+
+  &:hover {
+    background-color: darken(white, 4%);
+  }
+}
+
+@mixin modal-label {
+  display: block;
+  width: 100%;
+  margin: rem(4px) 0;
+  font-size: rem(12px);
+  line-height: 1rem;
+  font-weight: 700;
+  color: $font-clr4;
+}
+
+@mixin modal-input {
+  background-color: $clr4;
+  width: 100%;
+  padding: 0.5rem rem(12px);
+  margin-top: 4px;
+  margin-bottom: 12px;
+  border: none;
+  box-shadow: inset 0 0 0 2px #dfe1e6;
+  outline: none;
+  border-radius: 3px;
+  height: rem(36px);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  font-size: rem(14px);
+  font-weight: 400;
+  color: $brand-clr4;
+  transition: background-color 0.085s;
+
+  &:hover {
+    background-color: $brand-clr8;
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px $brand-clr2;
+    background-color: #ffff;
+  }
+}
+
+@mixin text-area-edit {
+  height: 100%;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
+  border: none;
+  background: none;
+  resize: none;
+  cursor: pointer;
+  color: $brand-clr4;
+  white-space: pre-wrap;
+  overflow: hidden;
+  overflow-wrap: break-word;
+
+  &:focus {
+    width: 100%;
+
+    margin-top: -6px;
+    padding: 8px 12px;
+    border-radius: 3px;
+    background-color: $clr8;
+    border: none;
+    box-shadow: inset 0 0 0 1px #091e4221;
+    outline: none;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    min-height: rem(56px);
+    margin-bottom: 4px;
+  }
+}

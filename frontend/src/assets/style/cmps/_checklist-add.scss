@@ -1,0 +1,16 @@
+.checklist-add {
+  width: 280px;
+
+  label {
+    @include modal-label;
+  }
+
+  input {
+    @include modal-input;
+  }
+
+  button {
+    margin-top: 0.5rem;
+    margin-right: 0.25rem;
+  }
+}

@@ -1,0 +1,24 @@
+.attachment-delete {
+  .warning-msg {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+      'Helvetica Neue', sans-serif;
+    font-size: rem(14px);
+    color: $brand-clr4;
+    line-height: 20px;
+    font-weight: 400;
+  }
+
+  .delete-btn {
+    @include btn2($clr11, $font-clr1);
+    width: 100%;
+    padding: rem(6px) rem(12px);
+    margin-top: 0.5rem;
+    border-radius: 3px;
+    line-height: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+      'Helvetica Neue', sans-serif;
+    font-weight: 400;
+    font-size: rem(14px);
+    transition: background-color 0.085s;
+  }
+}

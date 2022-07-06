@@ -1,0 +1,56 @@
+.account-actions {
+  width: 280px;
+
+  .account-info {
+    display: flex;
+
+    .account-img-container {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+
+      .account {
+        @include task-member-button(tomato);
+        width: 100%;
+        height: 100%;
+        font-size: 1rem;
+      }
+
+      .account-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+
+    .credentials {
+      margin-left: 0.5rem;
+      line-height: rem(20px);
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      font-weight: 400;
+
+      .fullname {
+        color: $brand-clr4;
+        font-size: rem(14px);
+      }
+
+      .username {
+        color: $font-clr5;
+        font-size: rem(12px);
+      }
+    }
+  }
+
+  hr {
+    border: none;
+    background-color: rgba(9, 30, 66, 0.13);
+    height: 1px;
+  }
+
+  button {
+    @include modal-main-btn;
+  }
+}

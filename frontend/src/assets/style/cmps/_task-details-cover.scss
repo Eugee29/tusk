@@ -1,0 +1,55 @@
+.task-details-cover {
+  position: relative;
+  padding: 0px;
+  background-origin: content-box;
+
+  &.color {
+    background-size: initial;
+    background-position: left center;
+    height: 116px;
+    min-height: 116px;
+  }
+
+  &.img {
+    background-size: contain;
+    background-position: center center;
+    background-color: transparent;
+    height: 160px;
+    min-height: 160px;
+    background-repeat: no-repeat;
+  }
+
+  &.point {
+    cursor: pointer;
+  }
+
+  button {
+    @include button-cover();
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+}
+
+.full-screen {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  position: fixed;
+  z-index: 100;
+}
+
+.background-blur {
+  height: 100vh;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  position: fixed;
+  background-color: #000000b3;
+}

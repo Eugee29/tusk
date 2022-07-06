@@ -1,0 +1,248 @@
+.checklist-preview {
+  margin-bottom: 24px;
+  width: 100%;
+
+  header {
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    height: auto;
+    padding: 0.5rem 0;
+    margin-inline-start: 40px;
+    margin-block-end: 4px;
+
+    .icon-container {
+      position: absolute;
+      left: -41px;
+      width: 2rem;
+      height: 2rem;
+      padding: 7px;
+
+      .icon {
+        width: 100%;
+        height: 100%;
+        color: $brand-clr4;
+      }
+    }
+
+    .inner-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+
+      .title-editor {
+        min-height: 36px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6px 0;
+        width: 100%;
+        cursor: pointer;
+
+        .controls {
+          align-self: flex-start;
+        }
+
+        .controls {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+          height: 32px;
+
+          .menu-container {
+            opacity: initial;
+            padding: 8px 10px;
+            width: 36px;
+
+            .menu {
+              width: 16px;
+              height: 16px;
+            }
+          }
+
+          .btn-container {
+            display: flex;
+            align-items: center;
+            margin: 0;
+            height: 100%;
+
+            button {
+              height: 100%;
+              border: none;
+              border-radius: 3px;
+              padding: 6px 12px;
+            }
+
+            .save {
+              background-color: $brand-clr2;
+              color: $font-clr1;
+              margin: 0;
+              margin-inline-end: 4px;
+              transition: background-color 0.085s;
+
+              &:hover {
+                background-color: $brand-clr1;
+              }
+            }
+
+            .discard-container {
+              height: 100%;
+              margin: 0;
+              padding: 2px;
+              background: none;
+
+              .discard {
+                width: 100%;
+                height: 100%;
+                color: $clr10;
+
+                &:hover {
+                  color: $brand-clr4;
+                }
+              }
+            }
+          }
+        }
+
+        textarea {
+          @include text-area-edit;
+          flex-grow: 1;
+          font-size: rem(16px);
+          font-weight: 700;
+        }
+
+        .menu-container {
+          position: relative;
+          opacity: 0;
+          height: 100%;
+          width: 20px;
+          padding: 2px;
+          border-radius: 3px;
+
+          &:hover {
+            background-color: $clr9;
+          }
+
+          .menu {
+            height: 100%;
+            width: 100%;
+            color: $clr3;
+          }
+        }
+      }
+
+      .title {
+        @include text-area-edit;
+        margin: 6px 0;
+        height: 20px;
+        font-size: 1rem;
+        font-weight: 600;
+        line-height: 20px;
+        min-width: 0;
+      }
+
+      .header-btn-container {
+        flex-grow: 1;
+
+        .inner-btn-container {
+          height: 100%;
+          margin-right: 2px;
+          float: right;
+        }
+
+        button {
+          margin-inline-start: 0.5rem;
+          padding-left: rem(12px);
+          padding-right: rem(12px);
+        }
+      }
+    }
+  }
+
+  .progress-bar-container {
+    position: relative;
+    height: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 6px;
+
+    .progress {
+      font-size: rem(11px);
+      color: $clr3;
+      text-align: center;
+      width: 32px;
+    }
+
+    .progress-bar {
+      background-color: #091e4214;
+      height: 100%;
+      width: 512px;
+      border-radius: 6rem;
+      transition: 0.14s ease-in;
+
+      &.bg-blue {
+        background-color: #5ba4cf !important;
+      }
+
+      &.bg-green {
+        background-color: #61bd4f !important;
+      }
+    }
+  }
+
+  .add-container {
+    margin-left: 40px;
+
+    .open-add {
+      margin: 0.5rem 0;
+    }
+
+    .todo-content {
+      width: 100%;
+      min-height: 56px;
+      margin-top: 4px;
+      padding: 8px 12px 9px;
+      border: none;
+      border-radius: 3px;
+      resize: vertical;
+      box-shadow: inset 0 0 0 2px #0079bf;
+      color: #172b4d;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+        'Helvetica Neue', sans-serif;
+      outline: none;
+      overflow: hidden;
+      overflow-wrap: break-word;
+      line-height: 20px;
+    }
+
+    .add-controls {
+      height: 2rem;
+      margin-top: 8px;
+
+      button {
+        @include btn2($brand-clr2, $font-clr1);
+        transition: 0.085s;
+        height: 100%;
+        padding: 6px 12px;
+        border-radius: 3px;
+        font-size: rem(14px);
+      }
+
+      .add-btn {
+        margin-right: 4px;
+      }
+
+      .cancel-btn {
+        background: none;
+        color: $brand-clr4;
+
+        &:hover {
+          background-color: $clr9;
+        }
+      }
+    }
+  }
+}

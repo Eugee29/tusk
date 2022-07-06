@@ -1,0 +1,54 @@
+$size: 50px;
+$speed: 0.5s;
+$bar-width: ceil($size / 5);
+$gutter-width: floor(($size - $bar-width * 3) / 2);
+$bar-color: #172b4d;
+
+.icon-bars {
+  width: 50px;
+  height: 50px;
+  margin-top: 51.7px;
+  position: fixed;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+
+  .bar {
+    position: absolute;
+    border-radius: 3px 3px 3px 3px;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    width: $bar-width;
+    background-color: $bar-color;
+    animation: up-down $speed infinite;
+
+    &.board {
+      background-color: rgba(0, 0, 0, 0.45);
+    }
+
+    &:nth-child(2) {
+      left: $bar-width + $gutter-width;
+      animation-delay: -$speed / 3 * 2;
+    }
+
+    &:nth-child(3) {
+      left: $bar-width * 2 + $gutter-width * 2;
+      animation-delay: -$speed / 3;
+    }
+  }
+}
+
+@keyframes up-down {
+  from {
+    top: $size;
+  }
+
+  50% {
+    bottom: 0;
+  }
+
+  to {
+    bottom: $size;
+  }
+}

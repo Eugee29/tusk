@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.15346428.css",
+    "main.js": "/static/js/main.98a86aa1.js",
+    "static/media/SourceSansPro-Regular.ttf": "/static/media/SourceSansPro-Regular.df87f53caf449a3b7572.ttf",
+    "static/media/SourceSansPro-SemiBold.ttf": "/static/media/SourceSansPro-SemiBold.f2fa8f369db189665539.ttf",
+    "static/media/demo.jpg": "/static/media/demo.2e74e08974cbbbdeb4b5.jpg",
+    "static/media/hero.png": "/static/media/hero.e8878a5487f1b4b94d6f.png",
+    "static/media/logo-horizontal-dark.png": "/static/media/logo-horizontal-dark.b2d77cef661c0d434383.png",
+    "static/media/logo-horizontal-white.png": "/static/media/logo-horizontal-white.02c5e310b27b989d580d.png",
+    "static/media/svg1.svg": "/static/media/svg1.ff7c76888fdd5eba1ab1c395d3bd0923.svg",
+    "static/media/SecularOne-Regular.ttf": "/static/media/SecularOne-Regular.141c1f3e034514617e8b.ttf",
+    "static/media/svg2.svg": "/static/media/svg2.df08073f2685e0d50554315cbd5d6217.svg",
+    "static/media/preview-board.svg": "/static/media/preview-board.8b3363dc291c5b86121aab57de177239.svg",
+    "index.html": "/index.html",
+    "main.15346428.css.map": "/static/css/main.15346428.css.map",
+    "main.98a86aa1.js.map": "/static/js/main.98a86aa1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15346428.css",
+    "static/js/main.98a86aa1.js"
+  ]
+}

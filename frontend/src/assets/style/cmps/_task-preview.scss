@@ -1,0 +1,179 @@
+.task-preview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 20px;
+  background-color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: rem(6px) 0.5rem rem(2px);
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 8px;
+  max-width: 300px;
+  box-shadow: 0 1px 0 #091e4240;
+  color: $brand-clr6;
+
+  &:hover .edit-btn {
+    opacity: 0.7;
+  }
+
+  .member-img-container {
+    display: inline-flex;
+    align-self: flex-end;
+    gap: 3px;
+    float: right;
+    height: 2rem;
+    margin-right: -2px;
+
+    .member {
+      @include task-member-button(tomato);
+      margin: 0;
+      height: 28px;
+      width: 28px;
+    }
+
+    .member-img {
+      height: 28px;
+      width: 28px;
+
+      img {
+        cursor: pointer;
+        float: left;
+        border-radius: 50%;
+        text-transform: uppercase;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        object-fit: cover;
+      }
+
+      span {
+        line-height: 30px;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .task-icon-container {
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+
+    .icon-container {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: $font-clr3;
+      margin: 0 4px 4px 0;
+    }
+
+    .icon-num-container {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .icon-time-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 23px;
+      width: 65px;
+      border-radius: 3px;
+      padding: 0px 4px;
+
+      span {
+        height: 50%;
+      }
+    }
+
+    .attachment-icon {
+      height: 12px;
+      width: 12px;
+    }
+
+    .lines-icon {
+      color: darken($color: $brand-clr11, $amount: 10%);
+      height: 15px;
+      width: 15px;
+      margin-top: 8px;
+    }
+
+    span {
+      font-size: 12px;
+      line-height: 10px;
+    }
+
+    &:hover button {
+      opacity: 0.7;
+    }
+  }
+
+  &.img-header {
+    padding: 0;
+
+    .task-info {
+      padding: rem(6px) 0.5rem rem(2px);
+    }
+
+    img {
+      height: 160px;
+      border-top-right-radius: 3px;
+      border-top-left-radius: 3px;
+    }
+  }
+
+  .edit-btn {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    top: 3px;
+    right: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0;
+
+    &:hover {
+      background-color: $brand-clr8;
+      opacity: 1;
+    }
+  }
+
+  &.styled {
+    font-size: 16px;
+    font-weight: 500;
+    flex-direction: row;
+    min-height: 56px;
+
+    &.img {
+      min-height: 260px;
+      background-size: cover;
+      background-position: center;
+      box-shadow: inset 0px -40px 20px 0px rgba(234, 234, 234, 0.856);
+    }
+
+    .task-info {
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  .task-title-container {
+    align-self: flex-end;
+    z-index: 20;
+    margin-bottom: rem(4px);
+  }
+}

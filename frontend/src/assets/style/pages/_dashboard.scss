@@ -1,0 +1,83 @@
+.dashboard {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.578);
+  border-radius: 3px;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+
+  .dashboard-modal {
+    position: absolute;
+    padding: 2.5rem;
+    border-radius: 3px;
+    max-width: 768px;
+    width: 100%;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $brand-clr9;
+
+    .close-btn {
+      position: absolute;
+      right: 0;
+      top: 0;
+      margin: 0.5rem;
+      height: 2rem;
+      width: 2rem;
+      background: none;
+      border: none;
+      padding: 0;
+
+      .close-icon {
+        height: 100%;
+        width: 100%;
+        color: $brand-clr14;
+      }
+    }
+
+    .info-container {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      .dashboard-grid {
+        display: grid;
+        flex-grow: 1;
+        grid-template-columns: 50% 50%;
+        background-color: white;
+        box-shadow: 0 3px 5px rgb(9 30 66 / 20%), 0 0 1px rgb(9 30 66 / 31%);
+        border-radius: 3px;
+
+        .all-task-container {
+          border-bottom: 1px solid #091e4221;
+          border-right: 1px solid #091e4221;
+          border-top-left-radius: 3px;
+        }
+
+        .complete-container {
+          border-bottom: 1px solid #091e4221;
+          border-top-right-radius: 3px;
+        }
+
+        .due-soon-container {
+          border-right: 1px solid #091e4221;
+          border-bottom-left-radius: 3px;
+        }
+
+        .overdue-container {
+          border-bottom-right-radius: 3px;
+        }
+      }
+
+      .main-chart-container {
+        border-radius: 3px;
+        background-color: white;
+        box-shadow: 0 3px 5px rgb(9 30 66 / 20%), 0 0 1px rgb(9 30 66 / 31%);
+        padding: 1rem;
+      }
+    }
+  }
+}
