@@ -26,15 +26,15 @@ You can check it out here: https://app-tusk.herokuapp.com/
 
 ## Authors
 
-- Uri Gruda
+#### Uri Gruda  
 [GitHub](https://github.com/Eugee29)    
 [LinkedIn](https://www.linkedin.com/in/uri-gruda-70b36b22b/)
   
-- Eran Avichzer
+#### Eran Avichzer  
 [GitHub](https://github.com/EranAAA)   
 [LinkedIn](https://www.linkedin.com/in/eran-avichzer/)
 
-- Tal Ofer
+#### Tal Ofer  
 [GitHub](https://github.com/TalAOfer)    
 [LinkedIn](https://www.linkedin.com/in/tal-ofer-9408b9242/)
 
