@@ -20,8 +20,7 @@ Created by a team of three, in three weeks.
 
 
 ## Deployment
-
-You can check it out here: https://tusk.onrender.com/
+https://tusk.onrender.com/
 
 
 ## Authors
