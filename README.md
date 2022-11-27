@@ -19,9 +19,9 @@ Created by a team of three, in three weeks.
 
 
 
-## Demo
+## Deployment
 
-You can check it out here: https://app-tusk.herokuapp.com/
+You can check it out here: https://tusk.onrender.com/
 
 
 ## Authors
