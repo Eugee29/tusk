@@ -1,5 +1,5 @@
 
-![Logo](https://app-tusk.herokuapp.com/static/media/logo-horizontal-dark.b2d77cef661c0d434383.png)
+![Logo](backend/public/static/media/logo-horizontal-dark.b2d77cef661c0d434383.png)
 
 
 # Tusk
