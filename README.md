@@ -1,3 +1,6 @@
+![Logo](backend/public/static/media/logo-horizontal-dark.b2d77cef661c0d434383.png)
+
+
 # Tusk
 
 A project management app inspired by Trello. Tusk was created by a team of three in just three weeks, using the following technologies:
@@ -20,4 +23,3 @@ Deployment is available at https://tusk.onrender.com/.
 - Frontend: https://github.com/Eugee29/tusk-2-frontend
 - Backend: https://github.com/Eugee29/tusk-2-backend
 
-![Logo](backend/public/static/media/logo-horizontal-dark.b2d77cef661c0d434383.png)
